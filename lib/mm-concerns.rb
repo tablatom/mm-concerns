@@ -7,11 +7,11 @@ module ConcernsPlugin
       end
     end
   end
-  module InstanceMethods
-    def concerned_with(*concerns)
-      self.class.concerned_with(concerns)
-    end
+
+  def concerned_with(*concerns)
+    self.class.concerned_with(concerns)
   end
+
 end
 
 MongoMapper::Document.plugin(ConcernsPlugin)
